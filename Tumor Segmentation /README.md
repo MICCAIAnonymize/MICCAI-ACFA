@@ -28,21 +28,21 @@ The nnUNet pretrained weights can be dowloaded from Synapse. Unzip the folder in
 The recommended preprocessing steps to get optimum performance are:
 * z-score normalization. For DCE-MRI, use the mean and standard deviation of all the phases (from pre to last post-contrast) to z-score the DCE-MRI sequence.
 * isotropic pixel spacing. The MRIs were resampled using a uniform pixel spacing of [1,1,1].
-* 
+  
 ### Step 5. Run the nnUNet inference
 nnUNetv2_predict -i /path/to/your/images -o /path/to/output -d 101 -c 3d_fullres
 * Replace /path/to/your/images with the directory containing your input images.
 * Replace /path/to/output with the directory where you want to save the output segmentations.
   *Note: An error might arise if your images are not in compressed NifTI format (.nii.gz).
 
-
+```bibtex
 @article{garrucho2025,
   title={A large-scale multicenter breast cancer DCE-MRI benchmark dataset with expert segmentations},
   author={Garrucho, Lidia and Kushibar, Kaisar and Reidel, Claire-Anne and Joshi, Smriti and Osuala, Richard and Tsirikoglou, Apostolia and Bobowicz, Maciej and Riego, Javier del and Catanese, Alessandro and Gwoździewicz, Katarzyna and Cosaka, Maria-Laura and Abo-Elhoda, Pasant M and Tantawy, Sara W and Sakrana, Shorouq S and Shawky-Abdelfatah, Norhan O and Salem, Amr Muhammad Abdo and Kozana, Androniki and Divjak, Eugen and Ivanac, Gordana and Nikiforaki, Katerina and Klontzas, Michail E and García-Dosdá, Rosa and Gulsun-Akpinar, Meltem and Lafcı, Oğuz and Mann, Ritse and Martín-Isla, Carlos and Prior, Fred and Marias, Kostas and Starmans, Martijn P A and Strand, Fredrik and Díaz, Oliver and Igual, Laura and Lekadir, Karim},
-  journal = {Scientific Data},
-  year = {2025},
-  doi = {10.1038/s41597-025-04707-4},
-  pages = {453},
-  number = {1},
-  volume = {12}
+  journal={Scientific Data},
+  year={2025},
+  volume={12},
+  number={1},
+  pages={453},
+  doi={10.1038/s41597-025-04707-4}
 }
