@@ -1,6 +1,5 @@
-...
 
-### Input files
+#### Input files
 
 Need two NIfTI files:
 
@@ -9,7 +8,7 @@ Need two NIfTI files:
 
 If the mask is not perfectly binary, the preprocessing will binarize it.
 
-### Example code
+#### Example code
 
 ```bash
 Python `extractor.py`:
