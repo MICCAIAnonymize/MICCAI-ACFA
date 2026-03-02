@@ -1,6 +1,19 @@
 import torch
 import torch.nn as nn
 
+class FusionDataset(Dataset):
+    def __init__(self, x_emb: np.ndarray, x_morph: np.ndarray, y: Optional[np.ndarray] = None):
+        self.x_emb = torch.tensor(x_emb, dtype=torch.float32)
+        self.x_morph = torch.tensor(x_morph, dtype=torch.float32)
+        self.y = None if y is None else torch.tensor(y, dtype=torch.long)
+
+    def __len__(self) -> int:
+        return int(self.x_emb.shape[0])
+
+    def __getitem__(self, idx: int):
+        if self.y is None:
+            return self.x_emb[idx], self.x_morph[idx]
+        return self.x_emb[idx], self.x_morph[idx], self.y[idx]
 
 class AttnBlock(nn.Module):
     def __init__(self, d_model: int, n_heads: int, dropout: float):
@@ -86,4 +99,5 @@ class FusionMultiHeadAttentionClassifier(nn.Module):
         logits = self.head(x[:, 0])
         if return_attn:
             return logits, attn_all
+
         return logits
