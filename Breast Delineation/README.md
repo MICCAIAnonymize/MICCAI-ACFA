@@ -59,3 +59,4 @@ Rokuss M, Hamm B, Kirchhoff Y, Maier Hein K. *Divide and Conquer: A Large Scale 
   journal = {arXiv preprint arXiv:2507.13830},
   year    = {2025}
 }
+
