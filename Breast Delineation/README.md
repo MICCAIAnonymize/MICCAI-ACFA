@@ -2,7 +2,7 @@
 
 BreastDivider provides a pretrained nnU Net model for 3D breast MRI that segments the breast region and separates left and right breasts. We use it to generate a breast mask for our pipeline.
 
-#### The trained model is also available on: [Offical Model and Dataset Link]([https://example.com](https://huggingface.co/ykirchhoff/BreastDividerModel))
+#### The trained model is also available on: [Link](https://huggingface.co/ykirchhoff/BreastDividerModel)
 ### Option A, Recommended, Docker inference
 
 1. Install Docker. For faster inference, use a machine with an NVIDIA GPU and NVIDIA Container Toolkit.
