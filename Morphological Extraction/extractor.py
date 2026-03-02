@@ -6,7 +6,7 @@ import pandas as pd
 
 from utils import read_image
 from utils import find_mask_case_insensitive, preprocess_mask_for_image, safe_float
-from model.radiomics_extractor import make_extractor
+from radiomic_extractor import make_extractor
 
 
 def extract_one_patient(pdir: str, masks_root: str, mode: str = "shape_only") -> Dict[str, Any]:
@@ -65,3 +65,4 @@ if __name__ == "__main__":
     pd.DataFrame([row]).to_csv("one_patient_features.csv", index=False)
 
     print("Saved one_patient_features.csv")
+
