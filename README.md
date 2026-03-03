@@ -125,33 +125,16 @@ Go to: `Fusion_Module/`
 
 ---
 
-## Reproducing experiments (high level)
-
-1. Generate `B_hat`, `T_hat` for all cases  
-2. Extract morphology vectors `r`  
-3. Build visual summaries and DINOv2 embeddings `v`  
-4. Train fusion classifier and evaluate
-
-Supported ablations:
-- slice aggregation: mean vs median vs max  
-- feature sets: DINOv2 + morphology vs handcrafted texture radiomics + shape  
-- fusion: gated attention vs simpler fusion variants
-
-## Results summary
-
-- Aggressiveness classification: avg AUC = **91.6%**
-- Molecular subtype classification: AUC = **84.3%**
-
 ## Limitations
 
 - Excludes multi-centric disease (multiple malignant lesions in different quadrants).
 - Scanner variability and low-quality scans may still affect appearance-driven features.
 
 ## Citation
-
+......Under-review.......
 ```bibtex
 @inproceedings{tugaf2026,
-  title={TuGAF: Tumor-guided Attention Fusion for Breast Cancer Characterization from DCE MRI},
+  title={ACFA: Tumor-guided Attention Fusion for Breast Cancer Characterization from DCE MRI},
   author={...},
   booktitle={...},
   year={2026}
