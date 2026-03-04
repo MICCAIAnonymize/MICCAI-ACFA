@@ -8,8 +8,8 @@ Given a multi-parametric DCE MRI study
 `\[
 \mathcal{X}=\{X^{pre},\,X^{post},\,X^{sub}\}, \quad X^{sub}=X^{post}-X^{pre},
 \]`
-TuGAF predicts a label `\(y\in\{1,\dots,C\}\)` by learning complementary signals from:
-- a **VISUAL branch** based on **DINOv2** embeddings computed from a tumor-focused 3-channel summary image, and
+ACFA predicts a label `\(y\in\{1,\dots,C\}\)` by learning complementary signals from:
+- a **VISUAL branch** based on **DINOv2** embeddings computed from a tumor-focused 3-channel aggregated image, and
 - an **explicit morphology branch** computed from the 3D tumor mask,  
 then combining them with a lightweight **attention-based fusion module**.
 
